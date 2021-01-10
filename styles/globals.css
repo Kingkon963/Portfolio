@@ -14,3 +14,12 @@ a {
 * {
   box-sizing: border-box;
 }
+
+@font-face {
+  font-family: 'MS Reference Sans Serif';
+  src: url('../public/fonts/MSReferenceSansSerif.woff2') format('woff2'),
+      url('../public/fonts/MSReferenceSansSerif.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
