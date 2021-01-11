@@ -7,25 +7,29 @@ export default function Navbar({setActiveLink}){
     const router = useRouter()
     
     useEffect(() => {
-        //router.push(active)
+        router.push({
+            pathname: active,
+            query: {
+                prevPage: (router.pathname === "/"+active) ? router.query.prevPage : router.pathname
+            }
+        })
         //console.log("Active State Changed to: "+active)
-        router.prefetch(active)
-        setTimeout(() => {
+        //router.prefetch(active)
+        /*setTimeout(() => {
             router.push(active)
-        }, 500)
+        }, 500)*/
 
     }, [active])
-
 
     return(
         <>
             <nav>
                 <ul>
-                    <li className={`${active === "Skills" ? 'active' : ''}`} 
+                    <li className={`${router.pathname === "/Skills" ? 'active' : (router.query.prevPage === '/Skills') ? 'inactive' : ''}`} 
                         onClick={() => setActive("Skills")}>Skills</li>
-                    <li className={`${active === "Portfolio" ? 'active' : ''}`} 
+                    <li className={`${router.pathname === "/Portfolio" ? 'active' : (router.query.prevPage === '/Portfolio') ? 'inactive' : ''}`} 
                         onClick={() => setActive("Portfolio")}>Portfolio</li>
-                    <li className={`${active === "Testimonials" ? 'active' : ''}`} 
+                    <li className={`${router.pathname === "/Testimonials" ? 'active' : (router.query.prevPage === '/Testimonials') ? 'inactive' : ''}`} 
                         onClick={() => setActive("Testimonials")}>Testimonials</li>
                 </ul>
             </nav>
@@ -52,12 +56,35 @@ export default function Navbar({setActiveLink}){
                 li:first-child{
                     margin-left: 0em;
                 }
+                @keyframes active {
+                    from {
+                        opacity: 86%;
+                        color: #B7D6EC;
+                    }
+                    to {
+                        color: #D8EFFF;
+                        transform: translateY(2px);
+                        opacity: 1;
+                        font-size: 1.5em;
+                        margin: 0 1em;
+                    }
+                }
+                .inactive{
+                    animation-name: active;
+                    animation-duration: .5s;
+                    animation-direction: reverse;
+                    animation-fill-mode: backwards;
+                }
                 .active{
-                    color: #D8EFFF;
+                    /*color: #D8EFFF;
                     transform: translateY(2px);
                     opacity: 1;
                     font-size: 1.5em;
-                    margin: 0 1em;
+                    margin: 0 1em;*/
+                    animation-name: active;
+                    animation-duration: .5s;
+                    animation-fill-mode: forwards;
+                    transition: all .5s;
                 }
                 ::-webkit-scrollbar {
                     width: 0px;  /* Remove scrollbar space */
