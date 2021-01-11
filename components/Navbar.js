@@ -1,20 +1,32 @@
-import {useState} from 'react'
+import {useState, useEffect} from 'react'
+import {useRouter} from 'next/router'
 
-export default function Navbar(){
-    const [active, setActive] = useState("Skills")
+export default function Navbar({setActiveLink}){
+    const [active, setActive] = useState(setActiveLink)
+    //console.log("From Navbar")
+    const router = useRouter()
+    
+    useEffect(() => {
+        //router.push(active)
+        //console.log("Active State Changed to: "+active)
+        router.prefetch(active)
+        setTimeout(() => {
+            router.push(active)
+        }, 500)
 
-    function setActiveLink(event){
-        console.log(event.target.textContent)
-        setActive(event.target.textContent)
-    }
+    }, [active])
+
 
     return(
         <>
             <nav>
                 <ul>
-                    <li className={`${active === "Skills" ? 'active' : ''}`} onClick={(e) => setActiveLink(e)}>Skills</li>
-                    <li className={`${active === "Portfolio" ? 'active' : ''}`} onClick={(e) => setActiveLink(e)}>Portfolio</li>
-                    <li className={`${active === "Testimonials" ? 'active' : ''}`} onClick={(e) => setActiveLink(e)}>Testimonials</li>
+                    <li className={`${active === "Skills" ? 'active' : ''}`} 
+                        onClick={() => setActive("Skills")}>Skills</li>
+                    <li className={`${active === "Portfolio" ? 'active' : ''}`} 
+                        onClick={() => setActive("Portfolio")}>Portfolio</li>
+                    <li className={`${active === "Testimonials" ? 'active' : ''}`} 
+                        onClick={() => setActive("Testimonials")}>Testimonials</li>
                 </ul>
             </nav>
             <style jsx>{`

@@ -1,25 +1,14 @@
+import ContentSection from './ContentSection'
 import Header from './Header'
-import Main from './Main'
-import Navbar from './Navbar'
 
 
-export default function Layout(){
+export default function Layout({children, setActiveLink}){
     return (
         <>
             <Header />
-            <div className="contentSection">
-                <Navbar />
-                <Main />
-            </div>
-            
-
-            <style jsx>{`
-                .contentSection{
-                    background-color: #162A31;
-                    height: 74vh;
-                    margin-top: 1vh;
-                }    
-            `}</style>
+            <ContentSection setActiveLink={setActiveLink}>
+                {children}
+            </ContentSection>
         </>
     )
 }
