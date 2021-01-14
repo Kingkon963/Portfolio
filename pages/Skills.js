@@ -20,26 +20,15 @@ export default function Skills(){
             level: 'Advance'
         },
         {
-            name: "Javascript",
-            src: "/images/javascript.jpg",
-            level: 'Advance'
+            name: "C++",
+            src: "/images/cplusplus.png",
+            level: 'Basics'
 
         }, 
         {
-            name: "Python",
-            src: "/images/python.png",
-            level: 'Advance'
-        },
-        {
-            name: "Javascript",
-            src: "/images/javascript.jpg",
-            level: 'Advance'
-
-        }, 
-        {
-            name: "Python",
-            src: "/images/python.png",
-            level: 'Advance',
+            name: "C",
+            src: "/images/c.png",
+            level: 'Intermediate'
         }
     ];
 
@@ -49,6 +38,44 @@ export default function Skills(){
             src: "/images/reactjs.png",
             level: 'Advance',
             rotate: true
+        },
+        {
+            name: "Nextjs",
+            src: "/images/nextjs.png",
+            level: 'Advance',
+        },
+        {
+            name: "Bootstrap",
+            src: "/images/bootstrap.png",
+            level: 'Advance',
+        },
+        {
+            name: "Django",
+            src: "/images/django.png",
+            level: 'Advance',
+        },
+    ];
+
+    let others = [
+        {
+            name: "Git",
+            src: "/images/git.png",
+            level: 'Basics',
+        },
+        {
+            name: "Sass",
+            src: "/images/sass.png",
+            level: 'Intermediate',
+        },
+        {
+            name: "Firebase",
+            src: "/images/firebase.png",
+            level: 'Basics',
+        },
+        {
+            name: "Adobe Xd",
+            src: "/images/xd.png",
+            level: 'Intermediate',
         },
     ]
 
@@ -76,18 +103,8 @@ export default function Skills(){
                         <ListSection title="Libraries & Frameworks" elements={frameworks} size={45}/>
                     </div>
                     <div>
-                        <ListSection title="Languages" elements={languages} size={45}/>
+                        <ListSection title="Others" elements={others} size={45}/>
                     </div>
-                    <div>
-                        <ListSection title="Libraries & Frameworks" elements={frameworks} size={45}/>
-                    </div>
-                    <div>
-                        <ListSection title="Languages" elements={languages} size={45}/>
-                    </div>
-                    <div>
-                        <ListSection title="Libraries & Frameworks" elements={frameworks} size={45}/>
-                    </div>
-                
                 </div>
 
             </div>
@@ -106,7 +123,7 @@ export default function Skills(){
                 overflow-y: scroll;
                 overflow-x: hidden;
                 display: grid;
-                row-gap: 3em; 
+                row-gap: 1em; 
             }
             ul{
                 //border: 1px solid white;

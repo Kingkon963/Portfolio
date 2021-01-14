@@ -24,7 +24,7 @@ export default function ListSection({title, elements, size, rotate}){
                             height={size}
                         />
                     </div>
-                    <SkillIndicator level="Advance"/>
+                    <SkillIndicator level={e.level}/>
                     </div>
                     )
             })}
