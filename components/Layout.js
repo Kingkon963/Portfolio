@@ -6,7 +6,7 @@ export default function Layout({children, setActiveLink}){
     return (
         <>
             <Head>
-                <meta name="theme-color" content="#999999" />
+                <meta name="theme-color" content="#162A31" />
             </Head>
             <Header />
             <ContentSection setActiveLink={setActiveLink}>

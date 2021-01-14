@@ -10,7 +10,7 @@ export default function Home() {
       <Head>
         <title>Naim</title>
         <link rel="icon" href="/me.svg" />
-        <meta name="theme-color" content="#999999" />
+        <meta name="theme-color" content="#162A31" />
       </Head>
 
       <Layout setActiveLink="Skills">
