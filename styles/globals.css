@@ -7,7 +7,8 @@ body {
     overflow-y: hidden;
 }
 :root{
-  --light-color : rgba(183,214,236, 86%)
+  --light-color : rgba(183,214,236, 86%);
+  --light-green : #29C5B2;
 }
 
 a {

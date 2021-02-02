@@ -10,18 +10,27 @@ export default function Portfolio(){
             </div>
             <div className="projectsContainer">
                 <div className="project">
-                    <img src="/images/projects/myKashBack.png" alt="mykashback"
-                   />
+                    <div className="inner-shadow">
+
+                    </div>
+                    <Image src="/images/projects/myKashBack2.png" alt="mykashback"
+                    className="projectImg" 
+                    width="300" height="300" 
+                    />
                 </div>
                 <div className="project">
-                    <img src="/images/projects/accountant.jpg" alt="mykashback"/>
+                    <div className="inner-shadow">
+
+                    </div>
+                    <Image src="/images/projects/accountant.jpg" alt="mykashback"
+                    className="projectImg" 
+                    width="300" height="200" layout="responsive"/>
                 </div>
 
 
             </div>
         </Layout>
-        <style jsx>
-        {`
+        <style jsx>{`
             .titleBar{
                 border-bottom: 1px solid #E4E4E4;
                 padding: 0 0 5px 0;
@@ -38,20 +47,32 @@ export default function Portfolio(){
             }
             .projectsContainer{
                 display: grid;
-                grid-template-columns: 114px 107px; 
-                row-gap: 3.5em;
+                grid-template-columns: 1fr; 
+                row-gap: 5em;
                 column-gap: 3.5em;
                 margin: 0 1em;
                 padding: 2.5em 1.5em;
                 overflow-y: scroll;
-                //height: 61vh;
+                height: 61vh;
                 //border: 1px solid white;
             }
             .project {
                 //border: 1px solid white;
                 padding: 0px;
                 text-align: center;
-                height: 107px;
+                position: relative;
+            }
+            .inner-shadow{
+                position: absolute;
+                z-index: 10;
+                width: 100%;
+                height: calc(100% - 3px);
+                color: white;
+                top: 0;
+                left: 0;
+                //border: 1px solid yellow;
+               // box-shadow: inset 0px -120px 150px -100px var(--light-green);
+               box-shadow: 4px 5px 6px rgba(255,255,255,16%);
             }
             .project:nth-child(odd) {
                 text-align: right;
@@ -59,12 +80,10 @@ export default function Portfolio(){
             .project:nth-child(even) {
                 text-align: left;
             }
-            img {
+            .projectImg {
                 background-repeat: no-repeat;
                 background-position: center;
                 object-fit: cover;
-                width: 114px;
-                height: 107px;
                 box-shadow: 4px 4px 6px rgba(255,255,255,16%);
             }
         `}
