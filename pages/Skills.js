@@ -52,7 +52,7 @@ export default function Skills(){
         {
             name: "Django",
             src: "/images/django.png",
-            level: 'Advance',
+            level: 'Intermediate',
         },
     ];
 
@@ -123,7 +123,7 @@ export default function Skills(){
                 overflow-y: scroll;
                 overflow-x: hidden;
                 display: grid;
-                row-gap: 1em; 
+                row-gap: 30px; 
             }
             ul{
                 //border: 1px solid white;

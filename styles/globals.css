@@ -6,6 +6,9 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
     overflow-y: hidden;
 }
+:root{
+  --light-color : rgba(183,214,236, 86%)
+}
 
 a {
   color: inherit;
