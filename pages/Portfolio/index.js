@@ -1,7 +1,15 @@
-import Layout from "../components/Layout";
+import Layout from "../../components/Layout";
 import Image from 'next/image'
+import { useRouter } from 'next/router'
+import projects from '../../data/projects'
+
+function handleClick(e, router){
+    let projectName = e.target.textContent
+    router.push("Portfolio/" + projectName + "/")
+}
 
 export default function Portfolio(){
+    const router = useRouter()
     return(
     <>
         <Layout setActiveLink="Portfolio">
@@ -9,25 +17,19 @@ export default function Portfolio(){
                 <h1>Projects</h1>
             </div>
             <div className="projectsContainer">
-                <div className="project">
-                    <div className="inner-shadow">
-
-                    </div>
-                    <Image src="/images/projects/myKashBack2.png" alt="mykashback"
-                    className="projectImg" 
-                    width="300" height="300" 
-                    />
-                </div>
-                <div className="project">
-                    <div className="inner-shadow">
-
-                    </div>
-                    <Image src="/images/projects/accountant.jpg" alt="mykashback"
-                    className="projectImg" 
-                    width="300" height="200" layout="responsive"/>
-                </div>
-
-
+                {projects.map(project => {
+                    return(
+                        <div className="project" onClick={(e) => handleClick(e, router)}>
+                            <div className="inner-shadow">
+                                {project.name}
+                            </div>
+                            <Image src={project.thumbnail} alt={project.name}
+                            className="projectImg" 
+                            width={project.width} height={project.height} 
+                            />
+                        </div>
+                    )
+                })}
             </div>
         </Layout>
         <style jsx>{`
@@ -48,7 +50,7 @@ export default function Portfolio(){
             .projectsContainer{
                 display: grid;
                 grid-template-columns: 1fr; 
-                row-gap: 5em;
+                row-gap: 2.5em;
                 column-gap: 3.5em;
                 margin: 0 1em;
                 padding: 2.5em 1.5em;
@@ -67,12 +69,17 @@ export default function Portfolio(){
                 z-index: 10;
                 width: 100%;
                 height: calc(100% - 3px);
-                color: white;
+                color: floralwhite;
                 top: 0;
                 left: 0;
                 //border: 1px solid yellow;
-               // box-shadow: inset 0px -120px 150px -100px var(--light-green);
-               box-shadow: 4px 5px 6px rgba(255,255,255,16%);
+                box-shadow: inset 0px -120px 100px -100px var(--light-green);
+               //box-shadow: 4px 5px 6px rgba(255,255,255,16%);
+               display: flex;
+               justify-content: center;
+               align-items: flex-end;
+               font-size: 1.5em;
+               padding-bottom: .3em;
             }
             .project:nth-child(odd) {
                 text-align: right;

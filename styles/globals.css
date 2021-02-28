@@ -9,6 +9,7 @@ body {
 :root{
   --light-color : rgba(183,214,236, 86%);
   --light-green : #29C5B2;
+  --dark-color : #162A31;
 }
 
 a {
