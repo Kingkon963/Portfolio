@@ -3,9 +3,13 @@ import Image from 'next/image'
 import { useRouter } from 'next/router'
 import projects from '../../data/projects'
 
-function handleClick(e, router){
+function handleClick(e, router, projectData){
     let projectName = e.target.textContent
-    router.push("Portfolio/" + projectName + "/")
+    console.log(projectName)
+    router.push({
+        pathname: "Portfolio/" + projectName + "/",
+        query: {data: JSON.stringify(projectData)},
+    })
 }
 
 export default function Portfolio(){
@@ -17,16 +21,21 @@ export default function Portfolio(){
                 <h1>Projects</h1>
             </div>
             <div className="projectsContainer">
-                {projects.map(project => {
+                {projects.map((project, id) => {
                     return(
-                        <div className="project" onClick={(e) => handleClick(e, router)}>
-                            <div className="inner-shadow">
+                        <div className="project" onClick={(e) => handleClick(e, router, project)}
+                        key={id}>
+                            <div className="inner-text">
                                 {project.name}
                             </div>
-                            <Image src={project.thumbnail} alt={project.name}
-                            className="projectImg" 
-                            width={project.width} height={project.height} 
-                            />
+                            <div className="imgContainer">
+                                <Image src={project.thumbnail} alt={project.name}
+                                className="projectImg" 
+                                width={project.width} height={project.height}
+                                layout="responsive" 
+                                />
+                            </div>
+
                         </div>
                     )
                 })}
@@ -49,22 +58,25 @@ export default function Portfolio(){
             }
             .projectsContainer{
                 display: grid;
-                grid-template-columns: 1fr; 
-                row-gap: 2.5em;
-                column-gap: 3.5em;
-                margin: 0 1em;
-                padding: 2.5em 1.5em;
+                grid-template-columns: 1fr 1fr;
+                gap: 1.5em;
+                margin: 1em;
                 overflow-y: scroll;
-                height: 61vh;
-                //border: 1px solid white;
+                //height: auto;
+                //border: 3px solid red;
+                
             }
             .project {
                 //border: 1px solid white;
                 padding: 0px;
                 text-align: center;
                 position: relative;
+                min-height: 150px;
+                min-width: 150px;
+                cursor: pointer;
             }
-            .inner-shadow{
+            .inner-text{
+                display: none;
                 position: absolute;
                 z-index: 10;
                 width: 100%;
@@ -74,12 +86,17 @@ export default function Portfolio(){
                 left: 0;
                 //border: 1px solid yellow;
                 box-shadow: inset 0px -120px 100px -100px var(--light-green);
-               //box-shadow: 4px 5px 6px rgba(255,255,255,16%);
-               display: flex;
-               justify-content: center;
-               align-items: flex-end;
-               font-size: 1.5em;
-               padding-bottom: .3em;
+                display: flex;
+                justify-content: center;
+                align-items: flex-end;
+                font-size: 20px;
+                padding-bottom: .3em;
+                transition: all .5s;
+            }
+            .inner-text:hover {
+                visibility: visible;
+                font-size: 30px;
+                box-shadow: inset 0px -120px 200px -100px var(--light-green);
             }
             .project:nth-child(odd) {
                 text-align: right;
@@ -87,11 +104,26 @@ export default function Portfolio(){
             .project:nth-child(even) {
                 text-align: left;
             }
+            .project:last-child {
+                //margin-bottom: 500px;
+            }
+            .imgContainer{
+                width: 114;
+                height: 107;
+            }
             .projectImg {
                 background-repeat: no-repeat;
                 background-position: center;
                 object-fit: cover;
                 box-shadow: 4px 4px 6px rgba(255,255,255,16%);
+            }
+            @media only screen and (min-width: 768px) {
+                .projectsContainer{
+                    grid-template-columns: 300px 300px 300px 300px;
+                    gap: 1.5em;
+                    margin: 1em;
+                    overflow: hidden;
+                }
             }
         `}
         </style>

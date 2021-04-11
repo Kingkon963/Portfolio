@@ -9,7 +9,7 @@ const projects = [
         name: 'Accounting Farm',
         thumbnail: '/images/projects/accountant.jpg',
         width: 300,
-        height: 200,
+        height: 300,
     },
 ]; 
 

@@ -10,8 +10,8 @@ export default function ContentSection({children, setActiveLink}){
         <style jsx>{`
             .contentSection{
                 background-color: #162A31;
-                height: 74vh;
-                margin-top: 1vh;
+                height: 75vh;
+                margin-top: 0vh;
             }    
         `}</style>
     </div>

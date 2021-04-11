@@ -13,12 +13,6 @@ export default function Navbar({setActiveLink}){
                 prevPage: (router.pathname === "/"+active) ? router.query.prevPage : router.pathname
             }
         })
-        //console.log("Active State Changed to: "+active)
-        //router.prefetch(active)
-        /*setTimeout(() => {
-            router.push(active)
-        }, 500)*/
-
     }, [active])
 
     return(

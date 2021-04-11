@@ -13,7 +13,7 @@ export default function Home() {
         <meta name="theme-color" content="#162A31" />
       </Head>
 
-      <Layout setActiveLink="Skills">
+      <Layout setActiveLink="Portfolio">
         <h1>Welcome</h1>
       </Layout>
     </div>
