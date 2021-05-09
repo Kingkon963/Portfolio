@@ -120,7 +120,7 @@ export default function Skills(){
             }
             .listContainer {
                 height: 60vh;
-                overflow-y: scroll;
+                overflow-y: hidden;
                 overflow-x: hidden;
                 display: grid;
                 row-gap: 30px; 

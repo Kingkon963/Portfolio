@@ -3,12 +3,12 @@ import Image from 'next/image'
 import { useRouter } from 'next/router'
 import projects from '../../data/projects'
 
-function handleClick(e, router, projectData){
+function handleClick(e, router, projectId){
     let projectName = e.target.textContent
     console.log(projectName)
     router.push({
         pathname: "Portfolio/" + projectName + "/",
-        query: {data: JSON.stringify(projectData)},
+        query: {id: JSON.stringify(projectId)},
     })
 }
 
@@ -23,7 +23,7 @@ export default function Portfolio(){
             <div className="projectsContainer">
                 {projects.map((project, id) => {
                     return(
-                        <div className="project" onClick={(e) => handleClick(e, router, project)}
+                        <div className="project" onClick={(e) => handleClick(e, router, id)}
                         key={id}>
                             <div className="inner-text">
                                 {project.name}
@@ -121,7 +121,7 @@ export default function Portfolio(){
                 .projectsContainer{
                     grid-template-columns: 300px 300px 300px 300px;
                     gap: 1.5em;
-                    margin: 1em;
+                    margin-top: 1.5em;
                     overflow: hidden;
                 }
             }

@@ -46,6 +46,7 @@ export default function Navbar({setActiveLink}){
                     margin-left: 1em;
                     margin-right: 1em;
                     transition: all .5s;
+                    cursor: pointer;
                 }
                 li:first-child{
                     margin-left: 0em;

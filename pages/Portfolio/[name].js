@@ -2,16 +2,17 @@ import {useState, useEffect} from 'react'
 import { useRouter } from 'next/router'
 import Head from 'next/head'
 import Image from 'next/image'
+import projects from '../../data/projects'
 
 export default function ProjectDetail({props}){
     const [project, setProject] = useState()
     
     const router = useRouter()
-    const {name, data} = router.query
+    const {name, id} = router.query
 
     useEffect(() => {
-        if(data){
-            setProject(JSON.parse(data))
+        if(id){
+            setProject(projects[id])
         }    
     }, project)
         
@@ -30,10 +31,30 @@ export default function ProjectDetail({props}){
                 <Image src={project.thumbnail} width={project.width} height={project.height}/>
             </div>
 
-            <div className="title">
-                <h1>{project.name}</h1>
+            <div className="content">
+                <div className="title">
+                    <h1>{project.name}</h1>
+                </div>
+
+                <div className="info">
+                    <span>Status</span>
+                    <span className="info-value">{project.status}</span>
+
+                    <span>Technology</span>
+                    <span className="info-value">{project.technology}</span>
+                </div>
+
+                <div className="description">
+                    <p>
+                        {project.description}
+                    </p>
+                </div>
             </div>
-            <hr />
+            
+            <button>
+                VISIT
+            </button>
+
         </div>
         : 
         <></>
@@ -56,15 +77,48 @@ export default function ProjectDetail({props}){
             .banner{
                 align-self: center;
             }
+            .content{
+                width: calc(100% - 6em);
+                align-self: center;
+            }
             .title{
                 color: var(--light-color);
                 font-family: 'MS Reference Sans Serif';
-                align-self: center;
+                text-align: center;
                 flex-grow: 100%;
-                border: 1px solid white;
+                border-bottom: 1px solid white;
             }
-            .title > hr {
-                width: 100%;
+            .info{
+                color: var(--light-color);
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                padding: 1em 0px;
+                row-gap: 1em;
+                white-space: nowrap;
+                font-size: .8em;
+            }
+            .info-value{
+                text-align: right;
+            }
+            p{
+                color: var(--light-color);
+                padding: 1em;
+                border: 1px solid var(--light-color);
+                font-size: .8em;
+            }
+            button{
+                background-color: var(--light-green);
+                padding: 1em;
+                border: none;
+                outline: none;
+                color: floralwhite;
+                border-radius: .3em;
+                width: 30vw;
+                align-self: center;
+                font-size: 1em;
+                font-weight: bold;
+                cursor: pointer;
+                margin-top: 1em;
             }
         `}</style>
     </>)
