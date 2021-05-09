@@ -1,12 +1,10 @@
 import Image from 'next/image'
+
 import SkillIndicator from './SkillIndicator'
+import keyGenerator from '../utils/keyGenerator'
 
 export default function ListSection({title, elements, size, rotate}){
 
-
-    /*elements.map((e) => {
-        return()
-    })*/
 
     return(<>
         <h3>{title}</h3>
@@ -14,19 +12,19 @@ export default function ListSection({title, elements, size, rotate}){
         <div className='container'>
 
             {elements.map((e) => {
-                return(<div className="elementContainer">
-                    <div className="imageWrapper" className={e.rotate? 'rotate': ''}>
-                        
-                        <Image
-                            src= {e.src}
-                            alt= {e.name}
-                            width={size}
-                            height={size}
-                        />
+                return(
+                    <div className="elementContainer" key={keyGenerator()}>
+                        <div className="imageWrapper" className={e.rotate? 'rotate': ''}>
+                            <Image
+                                src= {e.src}
+                                alt= {e.name}
+                                width={size}
+                                height={size}
+                            />
+                        </div>
+                        <SkillIndicator level={e.level}/>
                     </div>
-                    <SkillIndicator level={e.level}/>
-                    </div>
-                    )
+                )
             })}
             
         </div>

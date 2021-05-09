@@ -1,7 +1,7 @@
 import Layout from "../components/Layout";
 import ListSection from "../components/ListSection";
 import SkillIndicator from "../components/SkillIndicator";
-
+import Container from "../components/Container";
 
 
 
@@ -83,7 +83,7 @@ export default function Skills(){
     return(
     <>
         <Layout setActiveLink="Skills">
-            <div className='container'>
+            <Container>
                 <ul>
                     <SkillIndicator level="Advance"/>
                     <li>Advance</li>
@@ -107,17 +107,12 @@ export default function Skills(){
                     </div>
                 </div>
 
-            </div>
+            </Container>
             
         </Layout>
 
         <style jsx>
         {`
-            .container {
-                padding: 0 2.5em 0 2.5em;
-                margin: 0px;
-                height: 64vh;
-            }
             .listContainer {
                 height: 60vh;
                 overflow-y: hidden;
