@@ -1,0 +1,37 @@
+@use "devices";
+
+.container{
+    background-color: var(--middle-green);
+    border: 1px solid var(--light-green);
+    color: rgba(183, 214, 236, .86);
+    padding: .5em .75em;
+
+    @include devices.md {
+        max-width: 30vw;
+    }
+}
+.level{
+    display: flex;
+    align-items: center;
+}
+.header{
+    gap: 10px;
+}
+.rating{
+    margin-left: auto;
+    gap: 2px;
+    color: rgba(255, 193, 0, .86);
+}
+
+.hr{
+    border-color:#2A9D8F;
+}
+.comment{
+    line-height: 1.3rem;
+    font-size: .8rem;
+}
+.footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+}

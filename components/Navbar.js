@@ -10,7 +10,7 @@ export default function Navbar({setActiveLink}){
         router.push({
             pathname: active,
             query: {
-                prevPage: (router.pathname === "/"+active) ? router.query.prevPage : router.pathname
+                prevPage: (router.pathname === "/" + active) ? router.query.prevPage : router.pathname
             }
         })
     }, [active])

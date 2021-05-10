@@ -1,10 +1,12 @@
 import Image from 'next/image'
 
+import styles from '../styles/Testimonial.module.scss'
+
 export default function Testimonial({data}) {
     return(
     <>
-        <div className="container">
-            <div className="header level">
+        <div className={styles.container}>
+            <div className={`${styles.header} ${styles.level}`}>
                 <Image 
                     src="/images/defaultProfile.svg" 
                     alt="Profile Pic" 
@@ -13,7 +15,7 @@ export default function Testimonial({data}) {
                 />
                 {data.clientName}
 
-                <div className="rating level">
+                <div className={`${styles.rating} ${styles.level}`}>
                     <Image 
                         src="/images/star.svg" 
                         alt="Star" 
@@ -24,64 +26,28 @@ export default function Testimonial({data}) {
                 </div>
             </div>
 
-            <hr />
+            <hr className={styles.hr}/>
 
-            <p className="comment">
+            <p className={styles.comment}>
                 {data.comment}
             </p>
 
-            <div className="footer">
+            <div className={styles.footer}>
                 <Image 
                     src="/images/externalLink.svg" 
                     alt="Link" 
-                    width={18}
-                    height={18}
+                    width={30}
+                    height={30}
                 />
                 <Image 
-                    src="/images/fiver.svg" 
+                    src="/images/fiverr.png" 
                     alt="Fiverr" 
-                    width={18}
-                    height={18}
+                    width={39}
+                    height={30}
+                    layout="intrinsic"
                 />
             </div>
         </div>
-        
-        <style jsx>
-        {`
-            .container{
-                background-color: var(--middle-green);
-                border: 1px solid var(--light-green);
-                color: rgba(183, 214, 236, .86);
-                padding: .5em .75em;
-                max-width: 30vw;
-            }
-            .level{
-                display: flex;
-                align-items: center;
-            }
-            .header{
-                gap: 10px;
-            }
-            .rating{
-                margin-left: auto;
-                gap: 2px;
-                color: rgba(255, 193, 0, .86);
-            }
-
-            hr{
-                border-color:#2A9D8F;
-            }
-            .comment{
-                line-height: 1.3rem;
-                font-size: .8rem;
-            }
-            .footer{
-                display: flex;
-                flex-direction: row;
-                justify-content: end;
-            }
-        `}
-        </style>
     </>
     )
 }
