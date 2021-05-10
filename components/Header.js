@@ -11,7 +11,7 @@ export default function Header(){
     
     <style jsx>{`
         .headerContainer{
-            background-color: #264653;
+            background-color: var(--middle-green);
             margin: 0px;
             height: 25vh;
             padding: 1em 2em 0em 2em;

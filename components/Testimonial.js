@@ -3,7 +3,7 @@ import Image from 'next/image'
 export default function Testimonial({data}) {
     return(
     <>
-        <div className="data">
+        <div className="container">
             <div className="header level">
                 <Image 
                     src="/images/defaultProfile.svg" 
@@ -48,11 +48,12 @@ export default function Testimonial({data}) {
         
         <style jsx>
         {`
-            .data{
-                background-color: #264653;
-                border: 1px solid #2A9D8F;
+            .container{
+                background-color: var(--middle-green);
+                border: 1px solid var(--light-green);
                 color: rgba(183, 214, 236, .86);
                 padding: .5em .75em;
+                max-width: 30vw;
             }
             .level{
                 display: flex;
