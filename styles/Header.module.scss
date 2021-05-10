@@ -1,0 +1,42 @@
+@use "devices";
+
+.headerContainer{
+    background-color: var(--middle-green);
+    margin: 0px;
+    height: 25vh;
+    padding: 1em 2em 0em 2em;
+}
+
+.title{
+    color: #29C5B2;
+    font-family: 'MS Reference Sans Serif';
+    font-weight: normal;
+    font-size: 3em;
+    line-height: 1em;
+    letter-spacing: 0px;
+    //border: 1px solid white;
+    position: relative;
+    margin: 0px;
+
+    @include devices.xl() {
+        font-size: 4em;
+    }
+}
+.subTitle{
+    color: #83ABC6;
+    font-family: 'MS Reference Sans Serif';
+    font-weight: normal;
+    //border: 1px solid white;
+    line-height: 1em;
+    letter-spacing: .052em;
+    margin: 0px;
+}
+.profilePic {
+    width: 30px;
+    height: auto;
+    position: absolute;
+    top: .8em;
+    left: 3.28em;
+    border: 1px solid #2A9D8F;
+    border-radius: 50%;
+}
