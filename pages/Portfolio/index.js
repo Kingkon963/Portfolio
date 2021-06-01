@@ -29,10 +29,14 @@ export default function Portfolio(){
                                 {project.name}
                             </div>
                             <div className="imgContainer">
-                                <Image src={project.thumbnail} alt={project.name}
-                                className="projectImg" 
-                                width={project.width} height={project.height}
-                                layout="responsive" 
+                                <Image 
+                                    src={project.thumbnail} 
+                                    alt={project.name}
+                                    className="projectImg" 
+                                    width={project.width} 
+                                    height={project.height}
+                                    layout="responsive"
+                                    loading="eager" 
                                 />
                             </div>
 

@@ -20,6 +20,9 @@ export default function ListSection({title, elements, size, rotate}){
                                 alt= {e.name}
                                 width={size}
                                 height={size}
+                                layout="fixed"
+                                quality="100"
+                                loading="eager"
                             />
                         </div>
                         <SkillIndicator level={e.level}/>
@@ -35,7 +38,6 @@ export default function ListSection({title, elements, size, rotate}){
                 grid-template-columns: 45px 45px 45px 45px;
                 justify-content: flex-start;
                 column-gap: 2.4em;
-                row-gap: 1em;
                 padding: 0 .1em;
             }
             h3{

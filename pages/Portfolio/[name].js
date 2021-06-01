@@ -28,7 +28,7 @@ export default function ProjectDetail({props}){
             <img src="/backArrow.svg" alt="Back button" className="backArrow" onClick={() => router.back()}/>
 
             <div className="banner">
-                <Image src={project.thumbnail} width={project.width} height={project.height}/>
+                <Image src={project.thumbnail} width={project.width} height={project.height} loading="eager"/>
             </div>
 
             <div className="content">

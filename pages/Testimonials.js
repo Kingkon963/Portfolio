@@ -16,6 +16,15 @@ export const getStaticProps = async () => {
                               If needed would hire him again.`,
                     rating: 5
 
+                },
+                {
+                    clientName: 'harry0025',
+                    comment: `Naim solved my problem fast. 
+                              It was good communication and he is ready to go extra mail to get things done. 
+                              Good English writing. 
+                              If needed would hire him again.`,
+                    rating: 5
+
                 }
             ]
         }

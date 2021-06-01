@@ -17,7 +17,7 @@
     //border: 1px solid white;
     position: relative;
     margin: 0px;
-
+    
     @include devices.xl() {
         font-size: 4em;
     }
@@ -35,8 +35,13 @@
     width: 30px;
     height: auto;
     position: absolute;
-    top: .8em;
-    left: 3.28em;
+    top: .65em;
+    left: 3.2em;
     border: 1px solid #2A9D8F;
     border-radius: 50%;
+
+    @include devices.xl() {
+       top: .8em;
+       left: 3.28em;
+    }
 }
