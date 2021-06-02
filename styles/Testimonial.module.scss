@@ -1,37 +1,50 @@
 @use "devices";
 
-.container{
-    background-color: var(--middle-green);
-    border: 1px solid var(--light-green);
-    color: rgba(183, 214, 236, .86);
-    padding: .5em .75em;
+.container {
+  background-color: var(--middle-green);
+  border: 1px solid var(--light-green);
+  color: rgba(183, 214, 236, 0.86);
+  padding: 0.5em 0.75em;
 
-    @include devices.md {
-        max-width: 30vw;
-    }
+  @include devices.md {
+    max-width: 30vw;
+    font-size: 20px;
+    letter-spacing: 0.1ch;
+  }
 }
-.level{
-    display: flex;
-    align-items: center;
+.level {
+  display: flex;
+  align-items: center;
 }
-.header{
-    gap: 10px;
+.header {
+  gap: 10px;
 }
-.rating{
-    margin-left: auto;
-    gap: 2px;
-    color: rgba(255, 193, 0, .86);
+.rating {
+  margin-left: auto;
+  //margin-right: 1em;
+  border: 1px solid rgba(255, 193, 0, 0.86);
+  padding: 0.1em 0.5em;
+  gap: 7px;
+  color: rgba(255, 193, 0, 0.86);
+  font-size: 1.1em;
 }
-
-.hr{
-    border-color:#2A9D8F;
+.country {
+  margin-left: 2.5em;
+  margin-top: 0.5em;
+  font-size: 0.7em;
 }
-.comment{
-    line-height: 1.3rem;
-    font-size: .8rem;
+.hr {
+  border-color: #2a9d8f;
 }
-.footer{
-    display: flex;
-    flex-direction: row;
-    justify-content: end;
+.comment {
+  line-height: 1.5em;
+  font-size: 0.8em;
+  padding: 0.5em 2.4em;
+}
+.footer {
+  display: flex;
+  //border: 2px solid white;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin-left: 2em;
 }

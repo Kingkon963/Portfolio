@@ -2,15 +2,16 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: 'MS Reference Sans Serif', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-    overflow-y: hidden;
+  font-family: "MS Reference Sans Serif", -apple-system, BlinkMacSystemFont,
+    Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans,
+    Helvetica Neue, sans-serif;
+  overflow-y: hidden;
 }
-:root{
-  --light-color : rgba(183,214,236, 86%);
-  --light-green : #29C5B2;
+:root {
+  --light-color: rgba(183, 214, 236, 86%);
+  --light-green: #29c5b2;
   --middle-green: #264653;
-  --dark-color : #162A31;
+  --dark-color: #162a31;
 }
 
 a {
@@ -22,19 +23,27 @@ a {
   box-sizing: border-box;
 }
 
-h1,h2,h3,h4,h5,h6,p,li,img{
-  -webkit-user-select: none;  /* Chrome all / Safari all */
-  -moz-user-select: none;     /* Firefox all */
-  -ms-user-select: none;      /* IE 10+ */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+li,
+img {
+  -webkit-user-select: none; /* Chrome all / Safari all */
+  -moz-user-select: none; /* Firefox all */
+  -ms-user-select: none; /* IE 10+ */
   -webkit-user-drag: none;
-  user-select: none;    
-  user-drag: none;    
+  user-select: none;
+  user-drag: none;
 }
 
 @font-face {
-  font-family: 'MS Reference Sans Serif';
-  src: url('../public/fonts/MSReferenceSansSerif.woff2') format('woff2'),
-      url('../public/fonts/MSReferenceSansSerif.woff') format('woff');
+  font-family: "MS Reference Sans Serif";
+  src: url("../public/fonts/MSReferenceSansSerif.woff2") format("woff2"),
+    url("../public/fonts/MSReferenceSansSerif.woff") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: swap;

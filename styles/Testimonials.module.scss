@@ -1,0 +1,11 @@
+@use "devices";
+
+.container {
+  //border: 1px solid red;
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 25px;
+  @include devices.md {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
