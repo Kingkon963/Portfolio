@@ -55,6 +55,11 @@ export default function Skills() {
       level: "Advance",
     },
     {
+      name: "Tailwind css",
+      src: "/images/tailwindcss.png",
+      level: "Intermediate",
+    },
+    {
       name: "Django",
       src: "/images/django.png",
       level: "Intermediate",

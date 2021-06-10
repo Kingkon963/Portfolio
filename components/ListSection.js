@@ -17,7 +17,7 @@ export default function ListSection({ title, elements, size }) {
           display: grid;
           grid-template-columns: 1fr 1fr 1fr 1fr; //45px 45px 45px 45px;;
           justify-content: flex-start;
-          column-gap: 2.4em;
+          column-gap: 1em;
           row-gap: 1em;
           padding: 0 0.1em;
           color: #b7d6ec;
