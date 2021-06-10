@@ -5,6 +5,8 @@
   display: grid;
   grid-template-columns: 1fr;
   row-gap: 25px;
+  // height: 64vh;
+  // overflow-y: scroll;
   @include devices.md {
     grid-template-columns: 1fr 1fr 1fr;
   }

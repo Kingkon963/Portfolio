@@ -24,7 +24,7 @@ export default function Testimonial({ data }) {
 
         <div className={`${styles.level} ${styles.country}`}>
           <span
-            class={`flag-icon flag-icon-${lookup
+            className={`flag-icon flag-icon-${lookup
               .byCountry(data.country)
               .iso2.toLowerCase()} `}
           ></span>
@@ -36,19 +36,21 @@ export default function Testimonial({ data }) {
         <p className={styles.comment}>"{data.comment}"</p>
 
         <div className={styles.footer}>
-          <Image
-            src="/images/externalLink.svg"
-            alt="Link"
-            width={30}
-            height={30}
-          />
-          <Image
-            src="/images/fiverr.png"
-            alt="Fiverr"
-            width={39}
-            height={30}
-            layout="intrinsic"
-          />
+          <a href={data.url} className={styles.externalLink} target="_blank">
+            <Image
+              src="/images/externalLink.svg"
+              alt="Link"
+              width={30}
+              height={30}
+            />
+            <Image
+              src="/images/fiverr.png"
+              alt="Fiverr"
+              width={39}
+              height={30}
+              layout="intrinsic"
+            />
+          </a>
         </div>
       </div>
     </>
