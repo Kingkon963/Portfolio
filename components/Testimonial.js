@@ -1,4 +1,5 @@
 import Image from "next/image";
+import lookup from "country-code-lookup";
 
 import styles from "../styles/Testimonial.module.scss";
 
@@ -22,6 +23,11 @@ export default function Testimonial({ data }) {
         </div>
 
         <div className={`${styles.level} ${styles.country}`}>
+          <span
+            class={`flag-icon flag-icon-${lookup
+              .byCountry(data.country)
+              .iso2.toLowerCase()} `}
+          ></span>
           {data.country}
         </div>
 

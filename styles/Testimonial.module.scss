@@ -5,7 +5,7 @@
   border: 1px solid var(--light-green);
   color: rgba(183, 214, 236, 0.86);
   padding: 0.5em 0.75em;
-
+  position: relative;
   @include devices.md {
     max-width: 30vw;
     font-size: 20px;
@@ -15,6 +15,7 @@
 .level {
   display: flex;
   align-items: center;
+  gap: 0.5em;
 }
 .header {
   gap: 10px;
@@ -47,4 +48,8 @@
   flex-direction: row;
   justify-content: flex-end;
   margin-left: 2em;
+  padding: 0.2em 0.5em;
+  position: absolute;
+  bottom: 0;
+  right: 0;
 }
