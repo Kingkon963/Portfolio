@@ -6,7 +6,7 @@ export default function Container({ children }) {
       <style jsx>
         {`
           .container {
-            padding: 0 2.5em 0 2.5em;
+            padding: 0 2.5em;
             margin: 0px;
             height: 64vh;
             overflow-y: scroll;

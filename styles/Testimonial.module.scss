@@ -5,6 +5,7 @@
   border: 1px solid var(--light-green);
   color: rgba(183, 214, 236, 0.86);
   padding: 0.5em 0.75em;
+  padding-bottom: 2em;
   position: relative;
   @include devices.md {
     max-width: 30vw;

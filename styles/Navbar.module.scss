@@ -1,0 +1,67 @@
+@use 'devices';
+.nav {
+  color: #b7d6ec;
+  overflow-x: scroll;
+  padding-right: 1.5em;
+  @include devices.xl {
+    padding-right: 0px;
+    margin: 0 2.5em;
+  }
+}
+.ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+}
+.li {
+  text-transform: uppercase;
+  font-size: 0.8em;
+  opacity: 86%;
+  font-family: "MS Reference Sans Serif";
+  margin-left: 1em;
+  margin-right: 1em;
+  transition: all 0.5s;
+  cursor: pointer;
+  @include devices.xl {
+    padding: 10px 15vw;
+    text-align: center;
+    align-items: center;
+  }
+}
+.li:first-child {
+  margin-left: 0em;
+}
+.li:hover {
+  color: var(--light-green);
+  // filter: brightness(85%);
+}
+@keyframes active {
+  from {
+    opacity: 86%;
+    color: #b7d6ec;
+  }
+  to {
+    color: #d8efff;
+    transform: translateY(2px);
+    opacity: 1;
+    font-size: 1.5em;
+    margin: 0 1em;
+  }
+}
+.inactive {
+  animation-name: active;
+  animation-duration: 0.5s;
+  animation-direction: reverse;
+  animation-fill-mode: backwards;
+}
+.active {
+  /*color: #D8EFFF;
+            transform: translateY(2px);
+            opacity: 1;
+            font-size: 1.5em;
+            margin: 0 1em;*/
+  animation-name: active;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  transition: all 0.5s;
+}
