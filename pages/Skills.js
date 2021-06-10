@@ -11,6 +11,11 @@ export default function Skills() {
       level: "Advance",
     },
     {
+      name: "TypeScript",
+      src: "/images/typescript.png",
+      level: "Intermediate",
+    },
+    {
       name: "Python",
       src: "/images/python.png",
       level: "Advance",
@@ -26,8 +31,8 @@ export default function Skills() {
       level: "Intermediate",
     },
     {
-      name: "TypeScript",
-      src: "/images/typescript.png",
+      name: "Java",
+      src: "/images/java.png",
       level: "Intermediate",
     },
   ];
