@@ -15,26 +15,27 @@
   }
   25% {
     opacity: 0.4;
-    height: 3px;
+    height: 5px;
   }
   50% {
     opacity: 0.6;
-    height: 6px;
+    height: 10px;
   }
   75% {
     opacity: 0.8;
-    height: 9px;
+    height: 15px;
   }
   100% {
     opacity: 1;
-    height: 15px;
+    height: 20px;
   }
 }
 .name {
-  transition: height 1000;
+  transition: all 400ms;
   font-size: 0.6em;
   margin-bottom: 3px;
   height: 0px;
+  opacity: 0;
   overflow-y: hidden;
 
   @include devices.xl {
@@ -70,7 +71,7 @@
 }
 .elementContainer:hover {
   .name {
-    transition: height 1000;
-    animation: fadeIn 200ms ease forwards alternate;
+    opacity: 1;
+    height: 20px;
   }
 }

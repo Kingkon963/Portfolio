@@ -1,0 +1,75 @@
+@use "devices";
+.container {
+  height: 100vh;
+  background-color: var(--dark-color);
+  padding-top: 5em;
+  display: flex;
+  flex-direction: column;
+  align-items: strech;
+  //padding: 5em 3em 0 3em;
+  @include devices.lg {
+    padding: 5em 30vw;
+  }
+}
+
+.backArrow {
+  position: absolute;
+  top: 1em;
+  left: 1em;
+  cursor: pointer;
+}
+.banner {
+  align-self: center;
+}
+.content {
+  width: calc(100% - 6em);
+  align-self: center;
+}
+.title {
+  color: var(--light-color);
+  font-family: "MS Reference Sans Serif";
+  text-align: center;
+  flex-grow: 100%;
+  border-bottom: 1px solid white;
+}
+.info {
+  color: var(--light-color);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 1em 0px;
+  row-gap: 1em;
+  white-space: nowrap;
+  font-size: 0.8em;
+}
+.infoValue {
+  text-align: right;
+}
+.description {
+  p {
+    color: var(--light-color);
+    padding: 1em;
+    border: 1px solid var(--light-color);
+    font-size: 0.8em;
+    word-spacing: 0.2em;
+    line-height: 1.5em;
+    @include devices.lg {
+      line-height: 1.7em;
+      //letter-spacing: 0.1em;
+      font-size: 1em;
+    }
+  }
+}
+.visitBtn {
+  background-color: var(--light-green);
+  padding: 1em;
+  border: none;
+  outline: none;
+  color: floralwhite;
+  border-radius: 0.3em;
+  width: 30vw;
+  align-self: center;
+  font-size: 1em;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: auto;
+}
