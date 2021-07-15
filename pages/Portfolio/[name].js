@@ -17,7 +17,7 @@ export default function ProjectDetail({ props }) {
     if (id) {
       setProject(projects[id]);
     }
-  }, project);
+  }, [id]);
 
   return (
     <>
