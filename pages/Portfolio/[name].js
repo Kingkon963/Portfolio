@@ -3,6 +3,7 @@ import { useRouter } from "next/router";
 import Head from "next/head";
 import Image from "next/image";
 import projects from "../../data/projects";
+import { getWidth, displayAt } from "../../utils/screenSize";
 
 import styles from "../../styles/PortfolioDetails.module.scss";
 
@@ -34,14 +35,25 @@ export default function ProjectDetail({ props }) {
               onClick={() => router.back()}
             />
 
-            <div className={styles.banner}>
-              <Image
-                src={project.thumbnail}
-                width={project.width}
-                height={project.height}
-                loading="eager"
-              />
-            </div>
+            {displayAt(
+              "sm",
+              <div className={styles.banner}>
+                <Image
+                  src={project.thumbnail}
+                  width={project.width}
+                  height={project.height}
+                  objectFit="cover"
+                  loading="eager"
+                />
+              </div>
+            )}
+
+            {displayAt(
+              ["lg", "xl", "xxl"],
+              <div className={styles.banner}>
+                <Image src={project.image} layout="fill" loading="eager" />
+              </div>
+            )}
 
             <div className={styles.content}>
               <div className={styles.title}>
@@ -60,8 +72,13 @@ export default function ProjectDetail({ props }) {
                 <p>{project.description}</p>
               </div>
             </div>
-
-            <button className={styles.visitBtn}>VISIT</button>
+            {project.url ? (
+              <a className={styles.visitBtn} href={project.url} target="_blank">
+                VISIT
+              </a>
+            ) : (
+              <> </>
+            )}
           </div>
         </>
       ) : (

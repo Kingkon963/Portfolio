@@ -40,6 +40,7 @@ export default function Portfolio() {
                       width={project.width}
                       height={project.height}
                       layout="responsive"
+                      objectFit="cover"
                       loading="eager"
                     />
                   </div>
@@ -115,8 +116,10 @@ export default function Portfolio() {
             //margin-bottom: 500px;
           }
           .imgContainer {
-            width: 114;
-            height: 107;
+             {
+              /* width: 114;
+            height: 107; */
+            }
           }
           .projectImg {
             background-repeat: no-repeat;

@@ -9,6 +9,7 @@
   //padding: 5em 3em 0 3em;
   @include devices.lg {
     padding: 5em 30vw;
+    background-color: rgba(22, 42, 49, 0.9);
   }
 }
 
@@ -20,6 +21,9 @@
 }
 .banner {
   align-self: center;
+  @include devices.lg {
+    z-index: -1;
+  }
 }
 .content {
   width: calc(100% - 6em);
@@ -68,6 +72,7 @@
   border-radius: 0.3em;
   width: 30vw;
   align-self: center;
+  text-align: center;
   font-size: 1em;
   font-weight: bold;
   cursor: pointer;
