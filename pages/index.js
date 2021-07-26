@@ -8,7 +8,6 @@ export default function Home() {
     <div className={styles.container}>
       <Head>
         <title>Index</title>
-        <link rel="icon" href="/me.svg" />
         <meta name="theme-color" content="#162A31" />
       </Head>
 
