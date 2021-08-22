@@ -1,0 +1,28 @@
+@use "devices";
+
+@include devices.lg {
+  .flex {
+    display: flex;
+    //background-color: green;
+  }
+  .left {
+    //background-color: yellow;
+    width: 50%;
+  }
+  .right {
+    //background-color: red;
+    width: 50%;
+    color: floralwhite;
+  }
+  .hireMe {
+    font-size: 3rem;
+    background-color: var(--light-green);
+    background: linear-gradient(var(--light-green), #1979c7);
+    background-size: 100%;
+    background-clip: text;
+    -moz-background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+  }
+}
