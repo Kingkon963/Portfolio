@@ -60,6 +60,7 @@ export default function Skills() {
                       width="700"
                       height="250"
                       layout="intrinsic"
+                      loading="eager"
                     />
                   </a>
                 </>
