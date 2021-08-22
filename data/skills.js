@@ -22,7 +22,7 @@ export const languages = [
   {
     name: "C",
     src: "/images/c.png",
-    level: "Intermediate",
+    level: "Advance",
   },
   {
     name: "Java",
