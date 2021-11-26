@@ -80,6 +80,7 @@ export default function Skills() {
             height: 60vh;
             overflow-y: scroll;
             overflow-x: hidden;
+            scrollbar-width: none;
             display: grid;
             row-gap: 30px;
             max-width: 576px;

@@ -37,6 +37,7 @@
   height: 0px;
   opacity: 0;
   overflow-y: hidden;
+  scrollbar-width: none;
 
   @include devices.xl {
     font-size: 0.8em;

@@ -58,12 +58,27 @@ export const frameworks = [
     src: "/images/django.png",
     level: "Intermediate",
   },
+  {
+    name: "Strapi CMS",
+    src: "/images/strapi.png",
+    level: "Advance",
+  },
 ];
 
 export const others = [
   {
     name: "Git",
     src: "/images/git.png",
+    level: "Intermediate",
+  },
+  {
+    name: "Eslint",
+    src: "/images/eslint.svg",
+    level: "Intermediate",
+  },
+  {
+    name: "GraphQL",
+    src: "/images/graphql.png",
     level: "Intermediate",
   },
   {

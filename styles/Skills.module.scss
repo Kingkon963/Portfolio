@@ -16,13 +16,39 @@
   }
   .hireMe {
     font-size: 3rem;
-    background-color: var(--light-green);
-    background: linear-gradient(var(--light-green), #1979c7);
-    background-size: 100%;
-    background-clip: text;
-    -moz-background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -moz-text-fill-color: transparent;
+    animation: glow 500ms alternate infinite ease-in-out;
+  }
+
+  @keyframes glow {
+    0% {
+      background-color: var(--light-green);
+      background: linear-gradient(170deg, var(--light-green), #1979c7);
+      background-size: 100%;
+      background-clip: text;
+      -moz-background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      -moz-text-fill-color: transparent;
+    }
+    50% {
+      background-color: var(--light-green);
+      background: linear-gradient(175deg, var(--light-green), #1979c7);
+      background-size: 100%;
+      background-clip: text;
+      -moz-background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      -moz-text-fill-color: transparent;
+    }
+    100% {
+      background-color: var(--light-green);
+      background: linear-gradient(180deg, var(--light-green), #1979c7);
+      background-size: 100%;
+      background-clip: text;
+      -moz-background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      -moz-text-fill-color: transparent;
+    }
   }
 }

@@ -11,6 +11,19 @@ const projects = [
     url: "https://kingkon963.github.io/SparAV/",
   },
   {
+    name: "Cartzilla Theme",
+    thumbnail: "/images/projects/cartzilla_thumb.jpg",
+    image: "/images/projects/cartzilla.jpg",
+    width: 300,
+    height: 300,
+    status: "Completed",
+    technology: "Nextjs + Typescript + Material UI + Tailwindcss",
+    description: `I converted this 
+    <a href="https://cartzilla.createx.studio/home-electronics-store.html" target="_blank" style="border-bottom: 1px dashed white">cartzilla theme</a> 
+    into Nextjs (Reactjs) webapp for one of my client on Upwork`,
+    url: "https://cart-zilla.vercel.app/",
+  },
+  {
     name: "myKashBack",
     thumbnail: "/images/projects/myKashBack_thumb.png",
     image: "/images/projects/myKashBack.jpg",

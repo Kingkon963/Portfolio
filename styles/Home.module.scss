@@ -1,0 +1,78 @@
+@use "devices";
+
+.main {
+  //border: 1px solid #ffffff;
+  display: flex;
+  flex-direction: column;
+  color: floralwhite;
+  //padding: 5px;
+
+  @include devices.xl() {
+    flex-direction: row;
+    justify-content: start;
+    height: auto;
+    overflow-y: hidden;
+    margin: 5vh 0;
+  }
+  height: 65vh;
+  overflow-y: scroll;
+}
+
+.video {
+  @include devices.xl() {
+    width: 50vw;
+    //flex-grow: 1;
+    //padding: 0 20px;
+  }
+  //flex-grow: 1;
+  //background-color: red;
+  //margin: 0 40px 0 10vw;
+  text-align: center;
+  iframe {
+    width: 100vw;
+    @include devices.xl() {
+      width: 560px;
+      //max-width: 10000px;
+    }
+  }
+}
+
+.aboutMe {
+  @include devices.xl() {
+    width: 50vw;
+    //flex-grow: 1;
+    margin: 0 10vw 0 0;
+  }
+  //background-color: blue;
+  //flex-grow: 1;
+  padding: 10px;
+  //max-width: 500px;
+  margin: 0 auto;
+  h1 {
+    border-bottom: 1px solid floralwhite;
+    width: fit-content;
+    padding-bottom: 5px;
+  }
+  p {
+    line-height: 1.5rem;
+    @include devices.lg() {
+      letter-spacing: 0.1ch;
+      line-height: 1.5rem;
+    }
+  }
+}
+
+@keyframes shine {
+  0% {
+    color: floralwhite;
+  }
+  50% {
+    color: gold;
+  }
+  100% {
+    color: goldenrod;
+  }
+}
+.interest {
+  animation: shine 2s alternate infinite;
+}

@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import parse from "html-react-parser";
 import { useRouter } from "next/router";
 import Head from "next/head";
 import Image from "next/image";
@@ -69,7 +70,7 @@ export default function ProjectDetail({ props }) {
               </div>
 
               <div className={styles.description}>
-                <p>{project.description}</p>
+                <p>{parse(project.description)}</p>
               </div>
             </div>
             {project.url ? (
