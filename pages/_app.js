@@ -1,3 +1,4 @@
+import Script from "next/script";
 import "../styles/globals.css";
 import "../node_modules/flag-icon-css/css/flag-icon.min.css";
 import { NavContextProvider } from "../context/NavContext";
