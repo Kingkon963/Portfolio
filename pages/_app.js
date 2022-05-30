@@ -8,7 +8,7 @@ function MyApp({ Component, pageProps }) {
     <NavContextProvider>
       {/* ExacVisitor tag */}
       <Script
-        strategy="afterInteractive"
+        strategy="beforeInteractive"
         dangerouslySetInnerHTML={{
           __html: `
           (function(w, d) {
