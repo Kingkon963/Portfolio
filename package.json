@@ -8,6 +8,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "@panelbear/panelbear-nextjs": "^1.0.4",
     "country-code-lookup": "0.0.19",
     "flag-icon-css": "^3.5.0",
     "html-react-parser": "^1.4.0",

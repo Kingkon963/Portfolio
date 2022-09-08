@@ -11,8 +11,10 @@ var lg = 992;
 var xl = 1200;
 var xxl = 1400;
 
+const isBrowser = typeof window !== "undefined";
+
 export const getWidth = () => {
-  if (process.browser) {
+  if (isBrowser) {
     const width = window.screen.width;
     if (width <= sm) return "sm";
     if (width > sm && width <= md) return "md";
