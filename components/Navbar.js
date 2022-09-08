@@ -1,5 +1,6 @@
 import { useContext, useEffect } from "react";
 import { useRouter } from "next/router";
+import * as Panelbear from "@panelbear/panelbear-js";
 
 import { NavContext } from "../context/NavContext";
 
@@ -14,10 +15,7 @@ export default function Navbar() {
       router.push({
         pathname: active,
         query: {
-          prevPage:
-            router.pathname === "/" + active
-              ? router.query.prevPage
-              : router.pathname,
+          prevPage: router.pathname === "/" + active ? router.query.prevPage : router.pathname,
         },
       });
     }
@@ -35,7 +33,10 @@ export default function Navbar() {
                 ? styles.inactive
                 : ""
             } ${styles.li}`}
-            onClick={() => setActive("Skills")}
+            onClick={() => {
+              Panelbear.track("clickedSkills");
+              setActive("Skills");
+            }}
           >
             Skills
           </li>
@@ -47,7 +48,10 @@ export default function Navbar() {
                 ? styles.inactive
                 : ""
             } ${styles.li}`}
-            onClick={() => setActive("Portfolio")}
+            onClick={() => {
+              Panelbear.track("clickedPortfolio");
+              setActive("Portfolio");
+            }}
           >
             Portfolio
           </li>
@@ -59,7 +63,10 @@ export default function Navbar() {
                 ? styles.inactive
                 : ""
             } ${styles.li}`}
-            onClick={() => setActive("Testimonials")}
+            onClick={() => {
+              Panelbear.track("clickedTestimonials");
+              setActive("Testimonials");
+            }}
           >
             Testimonials
           </li>
