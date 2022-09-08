@@ -4,9 +4,7 @@ import { usePanelbear } from "@panelbear/panelbear-nextjs";
 import { NavContextProvider } from "../context/NavContext";
 
 function MyApp({ Component, pageProps }) {
-  usePanelbear("GISCWNIflyY", {
-    debug: true,
-  });
+  usePanelbear("GISCWNIflyY");
 
   return (
     <NavContextProvider>
