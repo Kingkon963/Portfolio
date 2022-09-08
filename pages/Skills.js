@@ -13,7 +13,7 @@ export default function Skills() {
         <Container>
           <div className={styles.flex}>
             <div className={styles.left}>
-              <ul>
+              <ul className={styles.skillLevels}>
                 <SkillIndicator level="Advance" />
                 <li>Advance</li>
 
@@ -24,7 +24,7 @@ export default function Skills() {
                 <li>Basics</li>
               </ul>
 
-              <div className="listContainer no-scrollbar">
+              <div className={styles.listContainer}>
                 <div>
                   <ListSection title="Languages" elements={languages} size={45} />
                 </div>
@@ -36,6 +36,7 @@ export default function Skills() {
                 </div>
               </div>
             </div>
+
             <div className={styles.right}>
               <h1 className={styles.hireMe}>Hire Me @</h1>
               <a href="https://www.upwork.com/freelancers/~014046cecba2ff7614" target="_blank">
@@ -47,49 +48,10 @@ export default function Skills() {
                   loading="eager"
                 />
               </a>
-              {/* {displayAt(
-                ["lg", "xl", "xxl"],
-
-                <></>
-              )} */}
             </div>
           </div>
         </Container>
       </Layout>
-
-      <style jsx>
-        {`
-          ::-webkit-scrollbar {
-            width: 0;
-            background: transparent;
-          }
-          .listContainer {
-            height: 60vh;
-            overflow-y: scroll;
-            overflow-x: hidden;
-            scrollbar-width: none;
-            display: grid;
-            row-gap: 30px;
-            max-width: 576px;
-          }
-          ul {
-            //border: 1px solid white;
-            list-style: none;
-            display: flex;
-            align-items: center;
-            padding: 0px 0em;
-            //justify-content: space-around;
-            margin-top: 0px;
-          }
-          li {
-            color: #b7d6ec;
-            opacity: 86%;
-            margin-left: 0.3em;
-            margin-right: 3em;
-            font-size: 0.8em;
-          }
-        `}
-      </style>
     </>
   );
 }

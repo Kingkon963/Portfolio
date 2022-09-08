@@ -10,7 +10,7 @@ export default function Header() {
           I'm Naim
           <img src="/me.svg" alt="" className={styles.profilePic} />
         </h1>
-        <h2 className={styles.subTitle}>a Front-end Developer</h2>
+        <h2 className={styles.subTitle}>a Softwere Engineer</h2>
       </div>
 
       <style jsx>{``}</style>

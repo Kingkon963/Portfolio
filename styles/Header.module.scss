@@ -1,47 +1,52 @@
 @use "devices";
 
-.headerContainer{
-    background-color: var(--middle-green);
-    margin: 0px;
-    height: 25vh;
-    padding: 1em 2em 0em 2em;
+.headerContainer {
+  background-color: var(--middle-green);
+  margin: 0px;
+  height: 25vh;
+  padding: 1em 2em 0em 2em;
 }
 
-.title{
-    color: #29C5B2;
-    font-family: 'MS Reference Sans Serif';
-    font-weight: normal;
-    font-size: 3em;
-    line-height: 1em;
-    letter-spacing: 0px;
-    //border: 1px solid white;
-    position: relative;
-    margin: 0px;
-    
-    @include devices.xl() {
-        font-size: 4em;
-    }
+.title {
+  color: #29c5b2;
+  font-family: "MS Reference Sans Serif";
+  font-weight: normal;
+  font-size: 3em;
+  line-height: 1em;
+  letter-spacing: 0px;
+  //border: 1px solid white;
+  position: relative;
+  margin: 0px;
+
+  @include devices.xl() {
+    font-size: 4em;
+  }
 }
-.subTitle{
-    color: #83ABC6;
-    font-family: 'MS Reference Sans Serif';
-    font-weight: normal;
-    //border: 1px solid white;
-    line-height: 1em;
-    letter-spacing: .052em;
-    margin: 0px;
+.subTitle {
+  color: #83abc6;
+  font-family: "MS Reference Sans Serif";
+  font-weight: normal;
+  //border: 1px solid white;
+  line-height: 1em;
+  letter-spacing: -0.05em;
+
+  margin: 0px;
+
+  @include devices.xl() {
+    letter-spacing: 0.11em;
+  }
 }
 .profilePic {
-    width: 30px;
-    height: auto;
-    position: absolute;
-    top: .65em;
-    left: 3.2em;
-    border: 1px solid #2A9D8F;
-    border-radius: 50%;
+  width: 30px;
+  height: auto;
+  position: absolute;
+  top: 0.65em;
+  left: 3.2em;
+  border: 1px solid #2a9d8f;
+  border-radius: 50%;
 
-    @include devices.xl() {
-       top: .8em;
-       left: 3.28em;
-    }
+  @include devices.xl() {
+    top: 0.8em;
+    left: 3.28em;
+  }
 }

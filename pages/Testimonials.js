@@ -78,8 +78,6 @@ export default function Testimonials(props) {
           </div>
         </Container>
       </Layout>
-
-      <style jsx>{``}</style>
     </>
   );
 }
