@@ -4,7 +4,6 @@ import ListSection from "../components/ListSection";
 import SkillIndicator from "../components/SkillIndicator";
 import Container from "../components/Container";
 import { languages, frameworks, others } from "../data/skills";
-import { displayAt } from "../utils/screenSize";
 import styles from "../styles/Skills.module.scss";
 
 export default function Skills() {
@@ -27,18 +26,10 @@ export default function Skills() {
 
               <div className="listContainer no-scrollbar">
                 <div>
-                  <ListSection
-                    title="Languages"
-                    elements={languages}
-                    size={45}
-                  />
+                  <ListSection title="Languages" elements={languages} size={45} />
                 </div>
                 <div>
-                  <ListSection
-                    title="Libraries & Frameworks"
-                    elements={frameworks}
-                    size={45}
-                  />
+                  <ListSection title="Libraries & Frameworks" elements={frameworks} size={45} />
                 </div>
                 <div>
                   <ListSection title="Others" elements={others} size={45} />
@@ -46,25 +37,21 @@ export default function Skills() {
               </div>
             </div>
             <div className={styles.right}>
-              {displayAt(
+              <h1 className={styles.hireMe}>Hire Me @</h1>
+              <a href="https://www.upwork.com/freelancers/~014046cecba2ff7614" target="_blank">
+                <Image
+                  src="/images/upwork-fill.jpg"
+                  width="700"
+                  height="250"
+                  layout="intrinsic"
+                  loading="eager"
+                />
+              </a>
+              {/* {displayAt(
                 ["lg", "xl", "xxl"],
 
-                <>
-                  <h1 className={styles.hireMe}>Hire Me @</h1>
-                  <a
-                    href="https://www.upwork.com/freelancers/~014046cecba2ff7614"
-                    target="_blank"
-                  >
-                    <Image
-                      src="/images/upwork-fill.jpg"
-                      width="700"
-                      height="250"
-                      layout="intrinsic"
-                      loading="eager"
-                    />
-                  </a>
-                </>
-              )}
+                <></>
+              )} */}
             </div>
           </div>
         </Container>

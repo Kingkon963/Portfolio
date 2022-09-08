@@ -13,6 +13,20 @@
     //background-color: red;
     width: 50%;
     color: floralwhite;
+    visibility: hidden;
+  }
+  @include devices.lg {
+    .right {
+      visibility: visible;
+      padding: 0 30px 0 30px;
+      display: flex;
+      flex-direction: column;
+      items-align: center;
+      // border: 1px solid white;
+      a {
+        max-width: 350px !important;
+      }
+    }
   }
   .hireMe {
     font-size: 3rem;
